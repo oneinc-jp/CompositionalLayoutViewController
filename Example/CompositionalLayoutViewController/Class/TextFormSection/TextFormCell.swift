@@ -92,6 +92,18 @@ class TextFormCell: UICollectionViewCell, NibReusable {
 }
 
 extension TextFormCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        shouldValidate = true
+        if let viewModel = viewModel,
+           let handler = viewModel.textForm.validationHandler,
+           handler(textField.text) == false {
+            textField.textColor = viewModel.textForm.validationAppearance.textColor
+        }
+        else {
+            textField.textColor = .darkText
+        }
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         shouldValidate = true
         if let viewModel = viewModel,

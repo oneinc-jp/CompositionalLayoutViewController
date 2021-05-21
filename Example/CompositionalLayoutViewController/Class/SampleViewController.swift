@@ -5,9 +5,16 @@
 //  Created by Akira Matsuda on 2021/05/21.
 //
 
+import Combine
 import CompositionalLayoutViewController
 
-class SampleViewController: CompositionalLayoutViewController {
+struct LoginInfo {
+    let email: String
+    let password: String
+}
+
+class SampleViewController: CompositionalLayoutViewController, SectionProvider {
+    private var cancellable = Set<AnyCancellable>()
     private let emailFormViewModel = TextFormViewModel(
         initialText: nil,
         textForm: .init(
@@ -39,19 +46,60 @@ class SampleViewController: CompositionalLayoutViewController {
         )
     )
 
+    private var validateEmail: AnyPublisher<String?, Never> {
+        return emailFormViewModel.$text
+            .map { email in
+                guard let email = email, email.isValidEmailAddress() else {
+                    return nil
+                }
+                return email
+            }
+            .eraseToAnyPublisher()
+    }
+
+    private var validateCredentials: AnyPublisher<LoginInfo?, Never> {
+        return Publishers.CombineLatest(validateEmail, passwordFormViewModel.$text)
+            .map { email, password in
+                guard let email = email,
+                      let password = password,
+                      !email.isEmpty, !password.isEmpty else {
+                    return nil
+                }
+                return LoginInfo(email: email, password: password)
+            }
+            .eraseToAnyPublisher()
+    }
+
+    var sections = [CollectionViewSection]()
+
+    func section(for sectionIndex: Int) -> CollectionViewSection {
+        return sections[sectionIndex]
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        provider = self
+
+        let loginButtonSection = ButtonSection(
+            buttonTitle: "Login",
+            action: .handler { [unowned self] in
+                print("Login button pressed \(String(describing: emailFormViewModel.text)):\(String(describing: passwordFormViewModel.text))")
+            }
+        )
+        loginButtonSection.isEnabled = false
+        validateCredentials.map {
+            return $0 != nil
+        }
+        .receive(on: RunLoop.main)
+        .assign(to: \.isEnabled, on: loginButtonSection)
+        .store(in: &cancellable)
+
         sections = [
             TextFormSection.form([
                 emailFormViewModel,
                 passwordFormViewModel
             ]),
-            ButtonSection(
-                buttonTitle: "Login",
-                action: .handler { [unowned self] in
-                    print("Login button pressed \(String(describing: emailFormViewModel.text)):\(String(describing: passwordFormViewModel.text))")
-                }
-            )
+            loginButtonSection
         ]
         reloadSections()
     }

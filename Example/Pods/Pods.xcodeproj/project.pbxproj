@@ -41,6 +41,7 @@
 		C4B25C532FFBDC292B2C6AB7E8B50034 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B708A6568D3CCF85BCB4C872AE1FB6F /* Reusable.swift */; };
 		D8454244FD6FC90C677DA523F66B1746 /* CompositionalLayoutViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2AFEF84F96BAFC4A4A418603047089 /* CompositionalLayoutViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0D1D9C3EBB6BFFC0DEED83A468DAB63 /* Pods-CompositionalLayoutViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BABEFA73DFB67B629C07A6F540A19D /* Pods-CompositionalLayoutViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E90610BF26581C54008ACD4F /* SectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90610BE26581C53008ACD4F /* SectionProvider.swift */; };
 		E9F6B1E9AC947D869B6675FFFD2C91A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		EE0865A620B9D3D36515646DF935F992 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A696DECB71EBB3E5979E5DE759B5820 /* NibLoadable.swift */; };
 		F48CD7DF28C721FBBB0A7BB8C0B93045 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
@@ -127,6 +128,7 @@
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D5FDDD3F968B2BEC9F2493689B254E5B /* UITableView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Reusable.swift"; path = "Sources/View/UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		DC8DBFEC6A78DB183893458DD4B8361C /* CompositionalLayoutViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CompositionalLayoutViewController-Info.plist"; sourceTree = "<group>"; };
+		E90610BE26581C53008ACD4F /* SectionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionProvider.swift; path = CompositionalLayoutViewController/Classes/SectionProvider.swift; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F0E38DB3413B8ED547392E46C00900F5 /* Pods-CompositionalLayoutViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CompositionalLayoutViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F8716B07048D5472CF6CF68BFE0E349F /* CompositionalLayoutViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CompositionalLayoutViewController.podspec; sourceTree = "<group>"; tabWidth = 2; };
@@ -270,6 +272,7 @@
 			children = (
 				A17E3EFCC399EA2E3C0205E9E36C858A /* CollectionViewSection.swift */,
 				56E29C4175A7A62BFD3389BE0C3D4475 /* CompositionalLayoutViewController.swift */,
+				E90610BE26581C53008ACD4F /* SectionProvider.swift */,
 				02BCF30AF069C0A8A82CA415C52820FD /* HashableObject.swift */,
 				8FC8B54483967E2887A96C3A98E40E03 /* HighlightableCell.swift */,
 				1D1E17B40FD6D8C5073A45F4F8F00D32 /* Pod */,
@@ -577,6 +580,7 @@
 			files = (
 				9584BE4731B15FFD5479E952C570006E /* CollectionViewSection.swift in Sources */,
 				16160CDDE4AF3C23579266D3968FD191 /* CompositionalLayoutViewController-dummy.m in Sources */,
+				E90610BF26581C54008ACD4F /* SectionProvider.swift in Sources */,
 				81353CA874DFEDF6694FB24329CC00B5 /* CompositionalLayoutViewController.swift in Sources */,
 				6FCBD0F4B6B156031420F1A70B03316D /* HashableObject.swift in Sources */,
 				3565B138B9E797852DC0BC10E9B16BC5 /* HighlightableCell.swift in Sources */,
