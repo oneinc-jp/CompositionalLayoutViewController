@@ -32,6 +32,7 @@ class SampleViewController: CompositionalLayoutViewController {
         initialText: nil,
         textForm: .init(
             placeholder: "Password",
+            isSecureTextEntry: true,
             autocorrectionType: .no,
             autocapitalizationType: .none,
             contentType: .password
