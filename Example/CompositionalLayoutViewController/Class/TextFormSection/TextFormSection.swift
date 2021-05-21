@@ -24,6 +24,14 @@ extension Array where Element == TextFormViewModel {
     }
 }
 
+extension TextFormSection {
+    static func form(_ forms: [TextFormViewModel]) -> TextFormSection {
+        return .init(
+            items: forms
+        )
+    }
+}
+
 class TextFormSection: HashableObject, CollectionViewSection {
     var snapshotItems: [AnyHashable] {
         return items
