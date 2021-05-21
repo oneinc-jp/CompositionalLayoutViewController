@@ -34,7 +34,7 @@ class TextFormSection: HashableObject, CollectionViewSection {
 }
 ```
 
-Secondly, 
+Secondly, implement your sections layout.
 ```swift
 func layoutSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
 ```
