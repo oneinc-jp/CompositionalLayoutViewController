@@ -8,19 +8,20 @@
 import UIKit
 
 open class CompositionalLayoutViewController: UIViewController {
+    private var collectionView: UICollectionView!
+
     public var highlightedColor: UIColor?
-    public lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
+    public var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>!
+    public weak var provider: SectionProvider?
+
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        let layout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] sectionIndex, environment -> NSCollectionLayoutSection? in
+            return self.provider?.section(for: sectionIndex).layoutSection(environment: environment)
+        }, configuration: layoutConfiguration())
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .systemBackground
         collectionView.delegate = self
-        return collectionView
-    }()
-
-    public var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>!
-    public var sections = [CollectionViewSection]()
-
-    open override func viewDidLoad() {
-        super.viewDidLoad()
         view.addSubview(collectionView)
         collectionView.delaysContentTouches = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,29 +33,26 @@ open class CompositionalLayoutViewController: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>(
             collectionView: collectionView
         ) { [unowned self] _, indexPath, _ -> UICollectionViewCell? in
-            return sections[indexPath.section].configuredCell(collectionView, indexPath: indexPath)
+            return provider?.section(for: indexPath.section).configuredCell(collectionView, indexPath: indexPath)
         }
         dataSource.supplementaryViewProvider = { [unowned self] _, kind, indexPath in
-            let view = sections[indexPath.section].supplementaryView(
+            guard let section = provider?.section(for: indexPath.section) else {
+                return nil
+            }
+            let view = section.supplementaryView(
                 collectionView,
                 kind: kind,
                 indexPath: indexPath
             )
             if let view = view {
-                sections[indexPath.section].configureSupplementaryView(view, indexPath: indexPath)
+                section.configureSupplementaryView(view, indexPath: indexPath)
             }
             return view
         }
     }
-    
+
     open func layoutConfiguration() -> UICollectionViewCompositionalLayoutConfiguration {
         return UICollectionViewCompositionalLayoutConfiguration()
-    }
-
-    open func layout() -> UICollectionViewCompositionalLayout {
-        return .init(sectionProvider: { sectionIndex, environment -> NSCollectionLayoutSection? in
-            return self.sections[sectionIndex].layoutSection(environment: environment)
-        }, configuration: layoutConfiguration())
     }
 
     open func registerViews(_ sections: [CollectionViewSection]) {
@@ -73,9 +71,12 @@ open class CompositionalLayoutViewController: UIViewController {
         }
         dataSource.apply(snapshot)
     }
-    
+
     open func reloadSections() {
-        updateDataSource(sections)
+        guard let provider = provider else {
+            return
+        }
+        updateDataSource(provider.sections)
     }
 
     open func didSelectItem(at indexPath: IndexPath) {}
