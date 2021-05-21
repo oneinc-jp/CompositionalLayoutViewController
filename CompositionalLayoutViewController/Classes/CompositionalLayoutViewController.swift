@@ -8,8 +8,7 @@
 import UIKit
 
 open class CompositionalLayoutViewController: UIViewController {
-    private var collectionView: UICollectionView!
-
+    public var collectionView: UICollectionView!
     public var highlightedColor: UIColor?
     public var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>!
     public weak var provider: SectionProvider?

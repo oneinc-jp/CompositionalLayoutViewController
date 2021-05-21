@@ -78,6 +78,7 @@ class SampleViewController: CompositionalLayoutViewController, SectionProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.contentInset.top = 32
         provider = self
 
         let loginButtonSection = ButtonSection(
