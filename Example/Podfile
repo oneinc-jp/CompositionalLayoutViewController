@@ -5,6 +5,9 @@ platform :ios, '9.0'
 target 'CompositionalLayoutViewController_Example' do
   pod 'CompositionalLayoutViewController', :path => '../'
 
+  pod 'Reusable'
+  pod 'SwiftFormat/CLI'
+
   target 'CompositionalLayoutViewController_Tests' do
     inherit! :search_paths
 

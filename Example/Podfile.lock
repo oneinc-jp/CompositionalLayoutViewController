@@ -1,0 +1,31 @@
+PODS:
+  - CompositionalLayoutViewController (0.1.0)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
+  - SwiftFormat/CLI (0.48.2)
+
+DEPENDENCIES:
+  - CompositionalLayoutViewController (from `../`)
+  - Reusable
+  - SwiftFormat/CLI
+
+SPEC REPOS:
+  trunk:
+    - Reusable
+    - SwiftFormat
+
+EXTERNAL SOURCES:
+  CompositionalLayoutViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CompositionalLayoutViewController: 6bd634222b9e0f0f5ad345e88d34411637ab17e0
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+  SwiftFormat: 480a8c281371d0ae142b2b877ef542462c01c39f
+
+PODFILE CHECKSUM: ac6b2462c3a457f6e1340278591fee4dc4544423
+
+COCOAPODS: 1.10.1

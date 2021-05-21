@@ -1,0 +1,6 @@
+framework module CompositionalLayoutViewController {
+  umbrella header "CompositionalLayoutViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

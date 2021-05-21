@@ -1,0 +1,39 @@
+# format options
+--binarygrouping none
+--closingparen balanced
+--commas inline
+--conflictmarkers reject
+
+--decimalgrouping none
+--octalgrouping none
+--hexgrouping none
+
+--elseposition next-line
+--guardelse same-line
+
+--empty void
+--exponentcase lowercase
+--exponentgrouping disabled
+--fractiongrouping disabled
+--fragment false
+--header ignore
+--hexliteralcase uppercase
+--ifdef indent
+--importgrouping alphabetized
+--indent 4
+--linebreaks lf
+
+--patternlet hoist
+--nospaceoperators
+--self remove
+--selfrequired 
+--stripunusedargs closure-only
+--trailingclosures 
+--trimwhitespace always
+--wraparguments before-first
+--wrapcollections before-first
+--xcodeindentation enabled
+--disable redundantReturn, wrapMultilineStatementBraces
+
+# file options
+--exclude Pods, Carthage, R.generated.swift

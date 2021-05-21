@@ -15,6 +15,16 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C49C371C4E1E83B492D31200 /* Pods_CompositionalLayoutViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759A42478EA941E93F55198 /* Pods_CompositionalLayoutViewController_Example.framework */; };
 		E37FBF8AD360BE9B297C172E /* Pods_CompositionalLayoutViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CB8C44FA6C15F272D2A500 /* Pods_CompositionalLayoutViewController_Tests.framework */; };
+		E906108B265766FA008ACD4F /* TextFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9061088265766FA008ACD4F /* TextFormCell.swift */; };
+		E906108C265766FA008ACD4F /* TextFormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9061089265766FA008ACD4F /* TextFormSection.swift */; };
+		E906108D265766FA008ACD4F /* TextFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E906108A265766FA008ACD4F /* TextFormCell.xib */; };
+		E906109026576755008ACD4F /* TextForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906108E26576755008ACD4F /* TextForm.swift */; };
+		E906109126576755008ACD4F /* TextFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906108F26576755008ACD4F /* TextFormViewModel.swift */; };
+		E906109326576A63008ACD4F /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906109226576A63008ACD4F /* SampleViewController.swift */; };
+		E906109626576BE8008ACD4F /* ButtonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906109526576BE8008ACD4F /* ButtonSection.swift */; };
+		E906109A26576C27008ACD4F /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E906109726576C27008ACD4F /* ButtonCell.xib */; };
+		E906109C26576C27008ACD4F /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906109926576C27008ACD4F /* ButtonCell.swift */; };
+		E906109E26576E15008ACD4F /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906109D26576E15008ACD4F /* String+Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E03A8EABD152021E463CE1F /* CompositionalLayoutViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CompositionalLayoutViewController.podspec; path = ../CompositionalLayoutViewController.podspec; sourceTree = "<group>"; };
-		26773E24238F6C4E2DEA3BE9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0E03A8EABD152021E463CE1F /* CompositionalLayoutViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CompositionalLayoutViewController.podspec; path = ../CompositionalLayoutViewController.podspec; sourceTree = "<group>"; };
+		26773E24238F6C4E2DEA3BE9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3528888696ADB633A88363B2 /* Pods-CompositionalLayoutViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositionalLayoutViewController_Example.release.xcconfig"; path = "Target Support Files/Pods-CompositionalLayoutViewController_Example/Pods-CompositionalLayoutViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CompositionalLayoutViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayoutViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,12 +51,22 @@
 		607FACE51AFB9204008FA782 /* CompositionalLayoutViewController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompositionalLayoutViewController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8265BA2D021232193464EA8B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8265BA2D021232193464EA8B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A7A122714DCD249B94636896 /* Pods-CompositionalLayoutViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositionalLayoutViewController_Tests.release.xcconfig"; path = "Target Support Files/Pods-CompositionalLayoutViewController_Tests/Pods-CompositionalLayoutViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AAC622A8D1D3D19964B6223E /* Pods-CompositionalLayoutViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositionalLayoutViewController_Example.debug.xcconfig"; path = "Target Support Files/Pods-CompositionalLayoutViewController_Example/Pods-CompositionalLayoutViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B63D874721A7B7FE36BD705E /* Pods-CompositionalLayoutViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositionalLayoutViewController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CompositionalLayoutViewController_Tests/Pods-CompositionalLayoutViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D759A42478EA941E93F55198 /* Pods_CompositionalLayoutViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompositionalLayoutViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CB8C44FA6C15F272D2A500 /* Pods_CompositionalLayoutViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompositionalLayoutViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9061088265766FA008ACD4F /* TextFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormCell.swift; sourceTree = "<group>"; };
+		E9061089265766FA008ACD4F /* TextFormSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormSection.swift; sourceTree = "<group>"; };
+		E906108A265766FA008ACD4F /* TextFormCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFormCell.xib; sourceTree = "<group>"; };
+		E906108E26576755008ACD4F /* TextForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextForm.swift; sourceTree = "<group>"; };
+		E906108F26576755008ACD4F /* TextFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormViewModel.swift; sourceTree = "<group>"; };
+		E906109226576A63008ACD4F /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		E906109526576BE8008ACD4F /* ButtonSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSection.swift; sourceTree = "<group>"; };
+		E906109726576C27008ACD4F /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		E906109926576C27008ACD4F /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		E906109D26576E15008ACD4F /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +113,7 @@
 		607FACD21AFB9204008FA782 /* Example for CompositionalLayoutViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E9061086265766FA008ACD4F /* Class */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -147,7 +168,6 @@
 				B63D874721A7B7FE36BD705E /* Pods-CompositionalLayoutViewController_Tests.debug.xcconfig */,
 				A7A122714DCD249B94636896 /* Pods-CompositionalLayoutViewController_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -158,6 +178,39 @@
 				E5CB8C44FA6C15F272D2A500 /* Pods_CompositionalLayoutViewController_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9061086265766FA008ACD4F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				E906109426576BE8008ACD4F /* ButtonSection */,
+				E9061087265766FA008ACD4F /* TextFormSection */,
+				E906109226576A63008ACD4F /* SampleViewController.swift */,
+				E906109D26576E15008ACD4F /* String+Validation.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		E9061087265766FA008ACD4F /* TextFormSection */ = {
+			isa = PBXGroup;
+			children = (
+				E906108E26576755008ACD4F /* TextForm.swift */,
+				E906108F26576755008ACD4F /* TextFormViewModel.swift */,
+				E9061088265766FA008ACD4F /* TextFormCell.swift */,
+				E9061089265766FA008ACD4F /* TextFormSection.swift */,
+				E906108A265766FA008ACD4F /* TextFormCell.xib */,
+			);
+			path = TextFormSection;
+			sourceTree = "<group>";
+		};
+		E906109426576BE8008ACD4F /* ButtonSection */ = {
+			isa = PBXGroup;
+			children = (
+				E906109926576C27008ACD4F /* ButtonCell.swift */,
+				E906109726576C27008ACD4F /* ButtonCell.xib */,
+				E906109526576BE8008ACD4F /* ButtonSection.swift */,
+			);
+			path = ButtonSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +266,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1250;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1250;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -227,6 +280,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -248,7 +302,9 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				E906109A26576C27008ACD4F /* ButtonCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				E906108D265766FA008ACD4F /* TextFormCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,10 +370,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CompositionalLayoutViewController_Example/Pods-CompositionalLayoutViewController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CompositionalLayoutViewController/CompositionalLayoutViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CompositionalLayoutViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,8 +389,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E906109026576755008ACD4F /* TextForm.swift in Sources */,
+				E906109E26576E15008ACD4F /* String+Validation.swift in Sources */,
+				E906109126576755008ACD4F /* TextFormViewModel.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E906109C26576C27008ACD4F /* ButtonCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				E906108C265766FA008ACD4F /* TextFormSection.swift in Sources */,
+				E906108B265766FA008ACD4F /* TextFormCell.swift in Sources */,
+				E906109326576A63008ACD4F /* SampleViewController.swift in Sources */,
+				E906109626576BE8008ACD4F /* ButtonSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +531,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -479,12 +545,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CompositionalLayoutViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -494,12 +561,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CompositionalLayoutViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -520,7 +588,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompositionalLayoutViewController_Example.app/CompositionalLayoutViewController_Example";
 			};
 			name = Debug;
@@ -538,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompositionalLayoutViewController_Example.app/CompositionalLayoutViewController_Example";
 			};
 			name = Release;
