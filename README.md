@@ -25,7 +25,7 @@ pod 'CompositionalLayoutViewController'
 ```
 
 ## Usage
-There are XX steps to declare collection view.
+There are four steps to declare collection view.
 
 Firstly, to compose complex collection view sections, you implement `Section` class that inherits `HashableObject` and `CollectionViewSection`.
 ```swift

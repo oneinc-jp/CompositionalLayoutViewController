@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Declaretive UICollectionViewCompositionalLayout interface to implement complex collection view layouts.
+  Declaretive UICollectionViewCompositionalLayout interface to implement complex collection view layout.
                        DESC
 
   s.homepage         = 'https://github.com/oneinc-jp/CompositionalLayoutViewController'
