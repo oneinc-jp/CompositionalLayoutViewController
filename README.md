@@ -71,7 +71,6 @@ var snapshotItems: [AnyHashable] {
 }
 ```
 
-
 Finally, you can declare collection view sections in subclass of `CompositionalLayoutViewController` as follows:
 ```swift
 sections = [
@@ -109,6 +108,22 @@ sections = [
     )
 ]
 reloadSections()
+```
+
+And also don't forget to assign `SectionProvider` that manages an array of sections.
+```swift
+public protocol SectionProvider: AnyObject {
+    var sections: [CollectionViewSection] { get }
+    func section(for sectionIndex: Int) -> CollectionViewSection
+}
+```
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    ...
+    provider = // assign your provider e.g. presenter in VIPER
+    ...
+}
 ```
 
 To handle cell selection, override `func didSelectItem(at indexPath: IndexPath)` method in subclass of `CompositionalLayoutViewController`.
