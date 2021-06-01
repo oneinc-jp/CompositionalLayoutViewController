@@ -7,16 +7,10 @@
 
 import Foundation
 
-open class HashableObject: Hashable {
+open class HashableObject: NSObject {
     let identifier = UUID()
 
-    public init() {}
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(identifier)
-    }
-
-    public static func == (lhs: HashableObject, rhs: HashableObject) -> Bool {
-        return lhs.identifier == rhs.identifier
+    open func isEqual(_ object: HashableObject?) -> Bool {
+        return identifier == object?.identifier
     }
 }
