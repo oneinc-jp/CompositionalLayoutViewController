@@ -51,6 +51,7 @@ open class CompositionalLayoutViewController: UIViewController {
             )
             if let view = view {
                 section.configureSupplementaryView(view, indexPath: indexPath)
+                configureSupplementaryView(view, indexPath: indexPath)
             }
             return view
         }
@@ -63,6 +64,8 @@ open class CompositionalLayoutViewController: UIViewController {
     open func configureCell(_ cell: UICollectionViewCell?) {}
 
     open func configureSection(_ section: CollectionViewSection?, layout: NSCollectionLayoutSection?) {}
+    
+    open func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath) {}
 
     open func registerViews(_ sections: [CollectionViewSection]) {
         for section in sections {

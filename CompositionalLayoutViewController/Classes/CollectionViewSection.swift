@@ -13,7 +13,7 @@ public protocol CollectionViewSection: HashableObject {
     func registerCell(collectionView: UICollectionView)
     func registerSupplementaryView(collectionView: UICollectionView)
     func layoutSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
-    func configuredCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
+    func configuredCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell?
     func supplementaryView(_ collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView?
     func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath)
 }
