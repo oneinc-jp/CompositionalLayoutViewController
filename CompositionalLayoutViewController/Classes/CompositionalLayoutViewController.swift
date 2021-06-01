@@ -18,7 +18,9 @@ open class CompositionalLayoutViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] sectionIndex, environment -> NSCollectionLayoutSection? in
             let section = provider?.section(for: sectionIndex)
             configureSection(section)
-            return section?.layoutSection(environment: environment)
+            let layout = section?.layoutSection(environment: environment)
+            configureLayout(layout)
+            return layout
         }, configuration: layoutConfiguration())
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .systemBackground
@@ -62,6 +64,8 @@ open class CompositionalLayoutViewController: UIViewController {
     open func configureCell(_ cell: UICollectionViewCell?) {}
 
     open func configureSection(_ section: CollectionViewSection?) {}
+    
+    open func configureLayout(_ layout: NSCollectionLayoutSection?) {}
 
     open func registerViews(_ sections: [CollectionViewSection]) {
         for section in sections {
