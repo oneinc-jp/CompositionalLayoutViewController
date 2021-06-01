@@ -16,7 +16,9 @@ open class CompositionalLayoutViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] sectionIndex, environment -> NSCollectionLayoutSection? in
-            return self.provider?.section(for: sectionIndex).layoutSection(environment: environment)
+            let section = provider?.section(for: sectionIndex)
+            configureSection(section)
+            return section?.layoutSection(environment: environment)
         }, configuration: layoutConfiguration())
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .systemBackground
@@ -32,7 +34,10 @@ open class CompositionalLayoutViewController: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>(
             collectionView: collectionView
         ) { [unowned self] _, indexPath, _ -> UICollectionViewCell? in
-            return provider?.section(for: indexPath.section).configuredCell(collectionView, indexPath: indexPath)
+            let section = provider?.section(for: indexPath.section)
+            let cell = section?.configuredCell(collectionView, indexPath: indexPath)
+            configureCell(cell)
+            return cell
         }
         dataSource.supplementaryViewProvider = { [unowned self] _, kind, indexPath in
             guard let section = provider?.section(for: indexPath.section) else {
@@ -53,6 +58,10 @@ open class CompositionalLayoutViewController: UIViewController {
     open func layoutConfiguration() -> UICollectionViewCompositionalLayoutConfiguration {
         return UICollectionViewCompositionalLayoutConfiguration()
     }
+    
+    open func configureCell(_ cell: UICollectionViewCell?) {}
+
+    open func configureSection(_ section: CollectionViewSection?) {}
 
     open func registerViews(_ sections: [CollectionViewSection]) {
         for section in sections {
