@@ -72,10 +72,6 @@ class SampleViewController: CompositionalLayoutViewController, SectionProvider {
 
     var sections = [CollectionViewSection]()
 
-    func section(for sectionIndex: Int) -> CollectionViewSection {
-        return sections[sectionIndex]
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.contentInset.top = 32
