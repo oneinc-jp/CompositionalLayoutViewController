@@ -17,9 +17,8 @@ open class CompositionalLayoutViewController: UIViewController {
         super.viewDidLoad()
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] sectionIndex, environment -> NSCollectionLayoutSection? in
             let section = provider?.section(for: sectionIndex)
-            configureSection(section)
             let layout = section?.layoutSection(environment: environment)
-            configureLayout(layout)
+            configureSection(section, layout: layout)
             return layout
         }, configuration: layoutConfiguration())
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -63,9 +62,7 @@ open class CompositionalLayoutViewController: UIViewController {
     
     open func configureCell(_ cell: UICollectionViewCell?) {}
 
-    open func configureSection(_ section: CollectionViewSection?) {}
-    
-    open func configureLayout(_ layout: NSCollectionLayoutSection?) {}
+    open func configureSection(_ section: CollectionViewSection?, layout: NSCollectionLayoutSection?) {}
 
     open func registerViews(_ sections: [CollectionViewSection]) {
         for section in sections {
