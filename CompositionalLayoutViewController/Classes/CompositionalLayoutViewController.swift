@@ -42,7 +42,9 @@ open class CompositionalLayoutViewController: UIViewController {
                 return nil
             }
             let section = provider.section(for: indexPath.section)
-            let cell = section.configuredCell(collectionView, indexPath: indexPath)
+            guard let cell = section.cell(for: collectionView, indexPath: indexPath) else {
+                return nil
+            }
             configureCell(cell)
             return cell
         }
@@ -68,7 +70,7 @@ open class CompositionalLayoutViewController: UIViewController {
         return UICollectionViewCompositionalLayoutConfiguration()
     }
     
-    open func configureCell(_ cell: UICollectionViewCell?) {}
+    open func configureCell(_ cell: UICollectionViewCell) {}
 
     open func configureSection(_ section: CollectionViewSection, layout: NSCollectionLayoutSection) {}
     
