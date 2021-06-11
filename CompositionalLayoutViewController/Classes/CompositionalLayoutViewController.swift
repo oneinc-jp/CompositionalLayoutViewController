@@ -16,8 +16,11 @@ open class CompositionalLayoutViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] sectionIndex, environment -> NSCollectionLayoutSection? in
-            let section = provider?.section(for: sectionIndex)
-            let layout = section?.layoutSection(environment: environment)
+            guard let provider = provider else {
+                return nil
+            }
+            let section = provider.section(for: sectionIndex)
+            let layout = section.layoutSection(environment: environment)
             configureSection(section, layout: layout)
             return layout
         }, configuration: layoutConfiguration())
@@ -35,15 +38,19 @@ open class CompositionalLayoutViewController: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>(
             collectionView: collectionView
         ) { [unowned self] _, indexPath, _ -> UICollectionViewCell? in
-            let section = provider?.section(for: indexPath.section)
-            let cell = section?.configuredCell(collectionView, indexPath: indexPath)
+            guard let provider = provider else {
+                return nil
+            }
+            let section = provider.section(for: indexPath.section)
+            let cell = section.configuredCell(collectionView, indexPath: indexPath)
             configureCell(cell)
             return cell
         }
         dataSource.supplementaryViewProvider = { [unowned self] _, kind, indexPath in
-            guard let section = provider?.section(for: indexPath.section) else {
+            guard let provider = provider else {
                 return nil
             }
+            let section = provider.section(for: indexPath.section)
             let view = section.supplementaryView(
                 collectionView,
                 kind: kind,
@@ -63,7 +70,7 @@ open class CompositionalLayoutViewController: UIViewController {
     
     open func configureCell(_ cell: UICollectionViewCell?) {}
 
-    open func configureSection(_ section: CollectionViewSection?, layout: NSCollectionLayoutSection?) {}
+    open func configureSection(_ section: CollectionViewSection, layout: NSCollectionLayoutSection) {}
     
     open func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath) {}
 
