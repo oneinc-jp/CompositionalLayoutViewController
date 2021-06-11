@@ -42,7 +42,7 @@ open class CompositionalLayoutViewController: UIViewController {
                 return nil
             }
             let section = provider.section(for: indexPath.section)
-            guard let cell = section.cell(for: collectionView, indexPath: indexPath) else {
+            guard let cell = section.cell(collectionView, indexPath: indexPath) else {
                 return nil
             }
             configureCell(cell)

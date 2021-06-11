@@ -75,7 +75,7 @@ class TextFormSection: HashableObject, CollectionViewSection {
         return section
     }
 
-    func cell(for collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {
+    func cell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: TextFormCell.self)
         cell.viewModel = items[indexPath.row]
         return cell

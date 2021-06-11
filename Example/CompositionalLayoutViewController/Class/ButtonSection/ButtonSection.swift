@@ -67,7 +67,7 @@ class ButtonSection: HashableObject, CollectionViewSection {
         return section
     }
 
-    func cell(for collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {
+    func cell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {
         cancellable.removeAll()
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ButtonCell.self)
         cell.title = buttonTitle
