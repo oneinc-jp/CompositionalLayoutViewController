@@ -33,14 +33,6 @@ extension TextFormSection {
 }
 
 class TextFormSection: CollectionViewSection {
-    var snapshotSection: AnyHashable {
-        var hasher = Hasher()
-        items.forEach {
-            hasher.combine($0)
-        }
-        return hasher.finalize()
-    }
-    
     var snapshotItems: [AnyHashable] {
         return items
     }

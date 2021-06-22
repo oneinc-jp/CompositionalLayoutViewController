@@ -8,7 +8,6 @@
 import UIKit
 
 public protocol CollectionViewSection {
-    var snapshotSection: AnyHashable { get }
     var snapshotItems: [AnyHashable] { get }
 
     func registerCell(collectionView: UICollectionView)
