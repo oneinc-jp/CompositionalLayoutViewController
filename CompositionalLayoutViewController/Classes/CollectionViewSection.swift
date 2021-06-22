@@ -7,7 +7,8 @@
 
 import UIKit
 
-public protocol CollectionViewSection: HashableObject {
+public protocol CollectionViewSection {
+    var snapshotSection: AnyHashable { get }
     var snapshotItems: [AnyHashable] { get }
 
     func registerCell(collectionView: UICollectionView)
@@ -16,10 +17,4 @@ public protocol CollectionViewSection: HashableObject {
     func cell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell?
     func supplementaryView(_ collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView?
     func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath)
-}
-
-extension CollectionViewSection {
-    var snapshotSection: AnyHashable {
-        return self
-    }
 }

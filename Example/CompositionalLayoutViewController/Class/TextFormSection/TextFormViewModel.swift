@@ -9,7 +9,15 @@ import Combine
 import CompositionalLayoutViewController
 import UIKit
 
-class TextFormViewModel: HashableObject {
+class TextFormViewModel: Hashable {
+    static func == (lhs: TextFormViewModel, rhs: TextFormViewModel) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(text)
+    }
+
     @Published var text: String?
     let textForm: TextForm
     var nextForm: TextFormViewModel?
@@ -19,7 +27,6 @@ class TextFormViewModel: HashableObject {
     init(initialText: String?, textForm: TextForm) {
         text = initialText
         self.textForm = textForm
-        super.init()
     }
 
     @discardableResult

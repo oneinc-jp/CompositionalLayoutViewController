@@ -9,7 +9,13 @@ import Combine
 import CompositionalLayoutViewController
 import UIKit
 
-class ButtonSection: HashableObject, CollectionViewSection {
+class ButtonSection: CollectionViewSection {
+    var snapshotSection: AnyHashable {
+        var hasher = Hasher()
+        hasher.combine(buttonTitle)
+        return hasher.finalize()
+    }
+    
     struct Appearance {
         let backgroundColor: UIColor?
         let titleColor: UIColor?

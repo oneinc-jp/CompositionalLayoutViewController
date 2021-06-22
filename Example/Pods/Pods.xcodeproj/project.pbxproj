@@ -30,7 +30,6 @@
 		45ED087737B0389E0A114182AE58EA90 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CA4D5A4A71B082319B2CBE45A57B /* UICollectionView+Reusable.swift */; };
 		51DF72EBDA2583D69CCA0954BF8A7D7B /* Reusable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D706930A56178B6D7E22805E9B5E5B9 /* Reusable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F94A9BECCFC97E0AA3C5DDDAD458993 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49F9379D3FD56981787C14C85C5697 /* NibOwnerLoadable.swift */; };
-		6FCBD0F4B6B156031420F1A70B03316D /* HashableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BCF30AF069C0A8A82CA415C52820FD /* HashableObject.swift */; };
 		7A9054E0F9309256215A73DAA02EB4E7 /* Pods-CompositionalLayoutViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F25CADC20FB1785C3868147CC86212 /* Pods-CompositionalLayoutViewController_Tests-dummy.m */; };
 		7D6D7194E990A2B2E3217BB1980E84E4 /* Pods-CompositionalLayoutViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 410497A35885FF7196D12894F38A3B02 /* Pods-CompositionalLayoutViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81353CA874DFEDF6694FB24329CC00B5 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E29C4175A7A62BFD3389BE0C3D4475 /* CompositionalLayoutViewController.swift */; };
@@ -79,7 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02BCF30AF069C0A8A82CA415C52820FD /* HashableObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashableObject.swift; path = CompositionalLayoutViewController/Classes/HashableObject.swift; sourceTree = "<group>"; };
 		05353AAFCFC397016DDDB2E9965C9A8D /* Pods-CompositionalLayoutViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CompositionalLayoutViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0753DDB303505F45EE0946A3ED37351A /* SwiftFormat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFormat.release.xcconfig; sourceTree = "<group>"; };
 		0AC7CA4D5A4A71B082319B2CBE45A57B /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Reusable.swift"; path = "Sources/View/UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				A17E3EFCC399EA2E3C0205E9E36C858A /* CollectionViewSection.swift */,
 				56E29C4175A7A62BFD3389BE0C3D4475 /* CompositionalLayoutViewController.swift */,
 				E90610BE26581C53008ACD4F /* SectionProvider.swift */,
-				02BCF30AF069C0A8A82CA415C52820FD /* HashableObject.swift */,
 				8FC8B54483967E2887A96C3A98E40E03 /* HighlightableCell.swift */,
 				1D1E17B40FD6D8C5073A45F4F8F00D32 /* Pod */,
 				E016FCD57F058196FCA05373CBC715FA /* Support Files */,
@@ -582,7 +579,6 @@
 				16160CDDE4AF3C23579266D3968FD191 /* CompositionalLayoutViewController-dummy.m in Sources */,
 				E90610BF26581C54008ACD4F /* SectionProvider.swift in Sources */,
 				81353CA874DFEDF6694FB24329CC00B5 /* CompositionalLayoutViewController.swift in Sources */,
-				6FCBD0F4B6B156031420F1A70B03316D /* HashableObject.swift in Sources */,
 				3565B138B9E797852DC0BC10E9B16BC5 /* HighlightableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
