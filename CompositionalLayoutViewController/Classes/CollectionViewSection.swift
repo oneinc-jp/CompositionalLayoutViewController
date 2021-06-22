@@ -18,3 +18,13 @@ public protocol CollectionViewSection {
     func supplementaryView(_ collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView?
     func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath)
 }
+
+extension CollectionViewSection {
+    var snapshotSection: AnyHashable {
+        var hasher = Hasher()
+        snapshotItems.forEach {
+            hasher.combine($0)
+        }
+        return hasher.finalize()
+    }
+}
