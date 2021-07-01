@@ -38,32 +38,40 @@ open class CompositionalLayoutViewController: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>(
             collectionView: collectionView
         ) { [unowned self] _, indexPath, _ -> UICollectionViewCell? in
-            guard let provider = provider else {
-                return nil
-            }
-            let section = provider.section(for: indexPath.section)
-            guard let cell = section.cell(collectionView, indexPath: indexPath) else {
-                return nil
-            }
-            configureCell(cell)
-            return cell
+            return cell(for: indexPath)
         }
         dataSource.supplementaryViewProvider = { [unowned self] _, kind, indexPath in
-            guard let provider = provider else {
-                return nil
-            }
-            let section = provider.section(for: indexPath.section)
-            let view = section.supplementaryView(
-                collectionView,
-                kind: kind,
-                indexPath: indexPath
-            )
-            if let view = view {
-                section.configureSupplementaryView(view, indexPath: indexPath)
-                configureSupplementaryView(view, indexPath: indexPath)
-            }
-            return view
+            return supplementaryView(for: kind, indexPath: indexPath)
         }
+    }
+    
+    open func cell(for indexPath: IndexPath) -> UICollectionViewCell? {
+        guard let provider = provider else {
+            return nil
+        }
+        let section = provider.section(for: indexPath.section)
+        guard let cell = section.cell(collectionView, indexPath: indexPath) else {
+            return nil
+        }
+        configureCell(cell)
+        return cell
+    }
+    
+    open func supplementaryView(for kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+        guard let provider = provider else {
+            return nil
+        }
+        let section = provider.section(for: indexPath.section)
+        let view = section.supplementaryView(
+            collectionView,
+            kind: kind,
+            indexPath: indexPath
+        )
+        if let view = view {
+            section.configureSupplementaryView(view, indexPath: indexPath)
+            configureSupplementaryView(view, indexPath: indexPath)
+        }
+        return view
     }
 
     open func layoutConfiguration() -> UICollectionViewCompositionalLayoutConfiguration {
