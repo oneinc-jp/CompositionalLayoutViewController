@@ -15,16 +15,7 @@ open class CompositionalLayoutViewController: UIViewController {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-        let layout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] sectionIndex, environment -> NSCollectionLayoutSection? in
-            guard let provider = provider else {
-                return nil
-            }
-            let section = provider.section(for: sectionIndex)
-            let layout = section.layoutSection(environment: environment)
-            configureSection(section, layout: layout)
-            return layout
-        }, configuration: layoutConfiguration())
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout(configuration: layoutConfiguration()))
         collectionView.backgroundColor = .systemBackground
         collectionView.delegate = self
         view.addSubview(collectionView)
@@ -74,6 +65,18 @@ open class CompositionalLayoutViewController: UIViewController {
         return view
     }
 
+    open func layout(configuration: UICollectionViewCompositionalLayoutConfiguration) -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] sectionIndex, environment -> NSCollectionLayoutSection? in
+            guard let provider = provider else {
+                return nil
+            }
+            let section = provider.section(for: sectionIndex)
+            let layout = section.layoutSection(environment: environment)
+            configureSection(section, layout: layout)
+            return layout
+        }, configuration: configuration)
+    }
+    
     open func layoutConfiguration() -> UICollectionViewCompositionalLayoutConfiguration {
         return UICollectionViewCompositionalLayoutConfiguration()
     }
