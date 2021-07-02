@@ -9,7 +9,7 @@ import Combine
 import CompositionalLayoutViewController
 import UIKit
 
-class ButtonSection: CollectionViewSection {    
+class ButtonSection: CollectionViewSection {
     struct Appearance {
         let backgroundColor: UIColor?
         let titleColor: UIColor?

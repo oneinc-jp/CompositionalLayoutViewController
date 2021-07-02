@@ -13,8 +13,8 @@ public protocol SectionProvider: AnyObject {
     func section(for sectionIndex: Int) -> CollectionViewSection
 }
 
-extension SectionProvider {
-    public func section(for sectionIndex: Int) -> CollectionViewSection {
+public extension SectionProvider {
+    func section(for sectionIndex: Int) -> CollectionViewSection {
         return sections[sectionIndex]
     }
 }

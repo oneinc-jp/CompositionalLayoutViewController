@@ -13,7 +13,7 @@ class TextFormViewModel: Hashable {
     static func == (lhs: TextFormViewModel, rhs: TextFormViewModel) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(text)
     }

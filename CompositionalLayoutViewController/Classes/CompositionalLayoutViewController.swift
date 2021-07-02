@@ -35,7 +35,7 @@ open class CompositionalLayoutViewController: UIViewController {
             return supplementaryView(for: kind, indexPath: indexPath)
         }
     }
-    
+
     open func cell(for indexPath: IndexPath) -> UICollectionViewCell? {
         guard let provider = provider else {
             return nil
@@ -47,7 +47,7 @@ open class CompositionalLayoutViewController: UIViewController {
         configureCell(cell)
         return cell
     }
-    
+
     open func supplementaryView(for kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
         guard let provider = provider else {
             return nil
@@ -76,15 +76,15 @@ open class CompositionalLayoutViewController: UIViewController {
             return layout
         }, configuration: configuration)
     }
-    
+
     open func layoutConfiguration() -> UICollectionViewCompositionalLayoutConfiguration {
         return UICollectionViewCompositionalLayoutConfiguration()
     }
-    
+
     open func configureCell(_ cell: UICollectionViewCell) {}
 
     open func configureSection(_ section: CollectionViewSection, layout: NSCollectionLayoutSection) {}
-    
+
     open func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath) {}
 
     open func registerViews(_ sections: [CollectionViewSection]) {
