@@ -56,7 +56,7 @@ You may have to deque `UICollectionReusableView` from a collection view.
 
 These cells and supplementary views are configured following methods.
 ```swift
-func configuredCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
+func cell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell?
 ```
 
 ```swift
