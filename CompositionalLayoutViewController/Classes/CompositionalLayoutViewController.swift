@@ -12,6 +12,7 @@ open class CompositionalLayoutViewController: UIViewController {
     public var highlightedColor: UIColor?
     public var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>!
     public weak var provider: SectionProvider?
+    public var animateWhenUpdate = true
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +102,7 @@ open class CompositionalLayoutViewController: UIViewController {
             snapshot.appendSections([section.snapshotSection])
             snapshot.appendItems(section.snapshotItems, toSection: section.snapshotSection)
         }
-        dataSource.apply(snapshot)
+        dataSource.apply(snapshot, animatingDifferences: animateWhenUpdate)
     }
 
     open func reloadSections() {
