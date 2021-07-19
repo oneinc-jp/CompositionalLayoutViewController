@@ -18,7 +18,7 @@ public protocol CollectionViewSection {
     func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath)
 }
 
-extension CollectionViewSection {
+public extension CollectionViewSection {
     var snapshotSection: AnyHashable {
         var hasher = Hasher()
         snapshotItems.forEach {
