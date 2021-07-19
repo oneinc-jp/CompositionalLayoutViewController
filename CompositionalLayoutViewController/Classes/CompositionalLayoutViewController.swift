@@ -12,7 +12,6 @@ open class CompositionalLayoutViewController: UIViewController {
     public var highlightedColor: UIColor?
     public var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>!
     public weak var provider: SectionProvider?
-    public var animateWhenUpdate = true
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +94,7 @@ open class CompositionalLayoutViewController: UIViewController {
         }
     }
 
-    open func updateDataSource(_ sections: [CollectionViewSection]) {
+    open func updateDataSource(_ sections: [CollectionViewSection], animateWhenUpdate: Bool = true) {
         registerViews(sections)
         var snapshot = NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable>()
         for section in sections {
