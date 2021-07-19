@@ -94,14 +94,14 @@ open class CompositionalLayoutViewController: UIViewController {
         }
     }
 
-    open func updateDataSource(_ sections: [CollectionViewSection]) {
+    open func updateDataSource(_ sections: [CollectionViewSection], animateWhenUpdate: Bool = true) {
         registerViews(sections)
         var snapshot = NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable>()
         for section in sections {
             snapshot.appendSections([section.snapshotSection])
             snapshot.appendItems(section.snapshotItems, toSection: section.snapshotSection)
         }
-        dataSource.apply(snapshot)
+        dataSource.apply(snapshot, animatingDifferences: animateWhenUpdate)
     }
 
     open func reloadSections() {
