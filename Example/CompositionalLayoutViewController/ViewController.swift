@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func presentViewController(_ sender: Any) {
-        navigationController?.pushViewController(SampleViewController(), animated: true)
+//        navigationController?.pushViewController(SampleViewController(), animated: true)
+        navigationController?.pushViewController(ListViewController(), animated: true)
     }
 }
