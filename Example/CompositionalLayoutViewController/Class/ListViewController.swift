@@ -32,7 +32,13 @@ class ListViewController: CompositionalLayoutViewController, SectionProvider {
                 var content = cell.defaultContentConfiguration()
                 content.text = item.title
                 return content
-            }
+            },
+            ButtonSection(
+                buttonTitle: "Button",
+                action: .handler {
+                    print("button")
+                }
+            )
         ]
         reloadSections()
     }
