@@ -20,8 +20,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func presentViewController(_ sender: Any) {
-        let viewController = SampleViewController()
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: true, completion: nil)
+//        navigationController?.pushViewController(SampleViewController(), animated: true)
+        navigationController?.pushViewController(ListViewController(), animated: true)
     }
 }

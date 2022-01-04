@@ -1,9 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (3.0.5)
+    CFPropertyList (3.0.4)
       rexml
-    activesupport (6.1.4.4)
+    activesupport (6.1.4.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -65,8 +65,8 @@ GEM
     httpclient (2.8.3)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    json (2.6.1)
-    minitest (5.15.0)
+    json (2.5.1)
+    minitest (5.14.4)
     molinillo (0.8.0)
     nanaimo (0.3.0)
     nap (1.1.0)
@@ -85,7 +85,7 @@ GEM
       colored2 (~> 3.1)
       nanaimo (~> 0.3.0)
       rexml (~> 3.2.4)
-    zeitwerk (2.5.3)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-darwin-20

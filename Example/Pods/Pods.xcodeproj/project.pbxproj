@@ -40,6 +40,8 @@
 		CBEB53C17955396DEF2AF22EE07516D3 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1457240BE8601BBC70B9FC8DABB95 /* CompositionalLayoutViewController.swift */; };
 		D8454244FD6FC90C677DA523F66B1746 /* CompositionalLayoutViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4DE1F9A5A643D9BCF1196ACBC12C90D /* CompositionalLayoutViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0D1D9C3EBB6BFFC0DEED83A468DAB63 /* Pods-CompositionalLayoutViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BABEFA73DFB67B629C07A6F540A19D /* Pods-CompositionalLayoutViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E90610BF26581C54008ACD4F /* SectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90610BE26581C53008ACD4F /* SectionProvider.swift */; };
+		E9A39B1226C7C4A7001D49A4 /* SupplementaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A39B1126C7C4A7001D49A4 /* SupplementaryItem.swift */; };
 		E9F6B1E9AC947D869B6675FFFD2C91A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		EE0865A620B9D3D36515646DF935F992 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A696DECB71EBB3E5979E5DE759B5820 /* NibLoadable.swift */; };
 		F48CD7DF28C721FBBB0A7BB8C0B93045 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
@@ -125,8 +127,9 @@
 		C8517D09E740E67A93D110E1256DC890 /* Reusable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reusable-prefix.pch"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D5FDDD3F968B2BEC9F2493689B254E5B /* UITableView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Reusable.swift"; path = "Sources/View/UITableView+Reusable.swift"; sourceTree = "<group>"; };
-		E4DE1F9A5A643D9BCF1196ACBC12C90D /* CompositionalLayoutViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CompositionalLayoutViewController-umbrella.h"; sourceTree = "<group>"; };
-		E7E547784EFEC83BDDFCBE27082ECB5C /* CompositionalLayoutViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CompositionalLayoutViewController.modulemap; sourceTree = "<group>"; };
+		DC8DBFEC6A78DB183893458DD4B8361C /* CompositionalLayoutViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CompositionalLayoutViewController-Info.plist"; sourceTree = "<group>"; };
+		E90610BE26581C53008ACD4F /* SectionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionProvider.swift; path = CompositionalLayoutViewController/Classes/SectionProvider.swift; sourceTree = "<group>"; };
+		E9A39B1126C7C4A7001D49A4 /* SupplementaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryItem.swift; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F0E38DB3413B8ED547392E46C00900F5 /* Pods-CompositionalLayoutViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CompositionalLayoutViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5839C28B3A027AFF0111FDE8C2A44A3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -269,29 +272,19 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		AC61C9581AEAD03B82066AFB19F755B5 /* Pod */ = {
+		A24B181E5A82F3B800E58D00078942DE /* CompositionalLayoutViewController */ = {
 			isa = PBXGroup;
 			children = (
-				80721EE65B4555297734E829478B4807 /* CompositionalLayoutViewController.podspec */,
-				F5839C28B3A027AFF0111FDE8C2A44A3 /* LICENSE */,
-				84F0020DE2F2F1506ADBBA61AB823FD1 /* README.md */,
+				A17E3EFCC399EA2E3C0205E9E36C858A /* CollectionViewSection.swift */,
+				56E29C4175A7A62BFD3389BE0C3D4475 /* CompositionalLayoutViewController.swift */,
+				E90610BE26581C53008ACD4F /* SectionProvider.swift */,
+				8FC8B54483967E2887A96C3A98E40E03 /* HighlightableCell.swift */,
+				E9A39B1126C7C4A7001D49A4 /* SupplementaryItem.swift */,
+				1D1E17B40FD6D8C5073A45F4F8F00D32 /* Pod */,
+				E016FCD57F058196FCA05373CBC715FA /* Support Files */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		B6B676CA41AA6D20C00F90DDC8B21FEF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7E547784EFEC83BDDFCBE27082ECB5C /* CompositionalLayoutViewController.modulemap */,
-				61E32A4AE2D733C529F40E2212281ED1 /* CompositionalLayoutViewController-dummy.m */,
-				9EEE90E1F3F39328D03634FD0B293E40 /* CompositionalLayoutViewController-Info.plist */,
-				64D6828CBE49CB6F798E9AC9C3FCBE97 /* CompositionalLayoutViewController-prefix.pch */,
-				E4DE1F9A5A643D9BCF1196ACBC12C90D /* CompositionalLayoutViewController-umbrella.h */,
-				16A751CDD92BED4CEE29B3D720480475 /* CompositionalLayoutViewController.debug.xcconfig */,
-				0CF238CACBA5E3592FE9224F34958970 /* CompositionalLayoutViewController.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CompositionalLayoutViewController";
+			name = CompositionalLayoutViewController;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC72F0519703EF95CC123BE6CEAB084D /* Support Files */ = {
@@ -570,11 +563,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15CDB22D839D3501CA28C11516FE2FD1 /* CollectionViewSection.swift in Sources */,
-				A0226C2293322F80482B44597C7E65C1 /* CompositionalLayoutViewController-dummy.m in Sources */,
-				CBEB53C17955396DEF2AF22EE07516D3 /* CompositionalLayoutViewController.swift in Sources */,
-				1ABA2634D6F386FD5557B643D9AF99DE /* HighlightableCell.swift in Sources */,
-				F5C642FBB4B3BCA94EBC3A8A018E4095 /* SectionProvider.swift in Sources */,
+				9584BE4731B15FFD5479E952C570006E /* CollectionViewSection.swift in Sources */,
+				16160CDDE4AF3C23579266D3968FD191 /* CompositionalLayoutViewController-dummy.m in Sources */,
+				E90610BF26581C54008ACD4F /* SectionProvider.swift in Sources */,
+				81353CA874DFEDF6694FB24329CC00B5 /* CompositionalLayoutViewController.swift in Sources */,
+				E9A39B1226C7C4A7001D49A4 /* SupplementaryItem.swift in Sources */,
+				3565B138B9E797852DC0BC10E9B16BC5 /* HighlightableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
