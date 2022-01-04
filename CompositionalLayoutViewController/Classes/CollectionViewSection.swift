@@ -20,9 +20,9 @@ public protocol CollectionViewSection {
     func makeUnique()
 }
 
+var nonceKey: UInt8 = 0
 public extension CollectionViewSection {
     var nonce: String? {
-        var nonceKey: UInt8 = 0
         guard let associatedObject = objc_getAssociatedObject(
             self,
             &nonceKey
@@ -37,14 +37,11 @@ public extension CollectionViewSection {
         snapshotItems.forEach {
             hasher.combine($0)
         }
-        if let nonce = nonce {
-            hasher.combine(nonce)
-        }
+        hasher.combine(nonce)
         return hasher.finalize()
     }
 
     func makeUnique() {
-        var nonceKey: UInt8 = 0
         objc_setAssociatedObject(
             self,
             &nonceKey,
