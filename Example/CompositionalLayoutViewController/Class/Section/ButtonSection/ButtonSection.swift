@@ -31,10 +31,10 @@ class ButtonSection: CollectionViewSection {
     var action: Action
     @Published var isEnabled = true
 
-    init(buttonTitle: String, appearance: Appearance? = nil, action: Action) {
+    init(buttonTitle: String, action: Action, appearance: Appearance? = nil) {
         self.buttonTitle = buttonTitle
-        self.appearance = appearance
         self.action = action
+        self.appearance = appearance
     }
 
     func registerCell(collectionView: UICollectionView) {

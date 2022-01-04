@@ -22,26 +22,14 @@ public protocol CollectionViewSection {
 
 public extension CollectionViewSection {
     var nonce: String? {
-        get {
-            var nonceKey: UInt8 = 0
-            guard let associatedObject = objc_getAssociatedObject(
-                self,
-                &nonceKey
-            ) as? String else {
-                return nil
-            }
-            return associatedObject
+        var nonceKey: UInt8 = 0
+        guard let associatedObject = objc_getAssociatedObject(
+            self,
+            &nonceKey
+        ) as? String else {
+            return nil
         }
-
-        set(nonce) {
-            var nonceKey: UInt8 = 0
-            objc_setAssociatedObject(
-                self,
-                &nonceKey,
-                nonce,
-                .OBJC_ASSOCIATION_RETAIN
-            )
-        }
+        return associatedObject
     }
 
     var snapshotSection: AnyHashable {
