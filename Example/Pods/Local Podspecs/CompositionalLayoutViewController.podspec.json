@@ -1,6 +1,6 @@
 {
   "name": "CompositionalLayoutViewController",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "summary": "Lightweight UICollectionViewCompositionalLayout wrapper",
   "swift_versions": "5.4",
   "description": "Declaretive UICollectionViewCompositionalLayout interface to implement complex collection view layout.",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/oneinc-jp/CompositionalLayoutViewController.git",
-    "tag": "0.4.0"
+    "tag": "0.5.0"
   },
   "platforms": {
     "ios": "13.0"
