@@ -17,7 +17,7 @@ public protocol CollectionViewSection {
     func supplementaryView(_ collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView?
     func configureSupplementaryView(_ view: UICollectionReusableView, indexPath: IndexPath)
 
-    func makeUnique()
+    func makeUnique(nonce: String)
 }
 
 var nonceKey: UInt8 = 0
@@ -41,11 +41,11 @@ public extension CollectionViewSection {
         return hasher.finalize()
     }
 
-    func makeUnique() {
+    func makeUnique(nonce: String = UUID().uuidString) {
         objc_setAssociatedObject(
             self,
             &nonceKey,
-            UUID().uuidString,
+            nonce,
             .OBJC_ASSOCIATION_RETAIN
         )
     }
