@@ -1,5 +1,5 @@
 PODS:
-  - CompositionalLayoutViewController (0.1.0)
+  - CompositionalLayoutViewController (0.5.0)
   - Reusable (4.1.1):
     - Reusable/Storyboard (= 4.1.1)
     - Reusable/View (= 4.1.1)
@@ -22,10 +22,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CompositionalLayoutViewController: 6bd634222b9e0f0f5ad345e88d34411637ab17e0
+  CompositionalLayoutViewController: dd293dab0778c30dd53e14d3d50eeae15fc18d2b
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   SwiftFormat: 480a8c281371d0ae142b2b877ef542462c01c39f
 
-PODFILE CHECKSUM: ac6b2462c3a457f6e1340278591fee4dc4544423
+PODFILE CHECKSUM: 9cf45443a1e096e986416671596aa81a6489d948
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

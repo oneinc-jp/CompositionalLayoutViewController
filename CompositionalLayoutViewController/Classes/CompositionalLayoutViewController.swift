@@ -12,6 +12,7 @@ open class CompositionalLayoutViewController: UIViewController {
     public var highlightedColor: UIColor?
     public var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>!
     public weak var provider: SectionProvider?
+    public var ignoreEmptySection = false
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -98,8 +99,16 @@ open class CompositionalLayoutViewController: UIViewController {
         registerViews(sections)
         var snapshot = NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable>()
         for section in sections {
-            snapshot.appendSections([section.snapshotSection])
-            snapshot.appendItems(section.snapshotItems, toSection: section.snapshotSection)
+            if section.snapshotItems.isEmpty {
+                if ignoreEmptySection == false {
+                    snapshot.appendSections([section.snapshotSection])
+                    snapshot.appendItems(section.snapshotItems, toSection: section.snapshotSection)
+                }
+            }
+            else {
+                snapshot.appendSections([section.snapshotSection])
+                snapshot.appendItems(section.snapshotItems, toSection: section.snapshotSection)
+            }
         }
         dataSource.apply(snapshot, animatingDifferences: animateWhenUpdate)
     }
