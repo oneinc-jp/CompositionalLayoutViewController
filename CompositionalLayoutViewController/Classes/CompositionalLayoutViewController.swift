@@ -136,7 +136,7 @@ extension CompositionalLayoutViewController: UICollectionViewDelegate {
 
     public func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? HighlightableCell, cell.clvc_isHighlightable {
-            cell.contentView.backgroundColor = nil
+            cell.contentView.backgroundColor = cell.clvc_defaultColor
         }
     }
 }
