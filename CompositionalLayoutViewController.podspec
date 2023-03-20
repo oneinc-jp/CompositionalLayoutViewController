@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name = "CompositionalLayoutViewController"
-  s.version = "0.5.5"
+  s.version = "0.6.0"
   s.summary = "Lightweight UICollectionViewCompositionalLayout wrapper"
-  s.swift_versions = "5.4"
+  s.swift_versions = "5.7"
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.

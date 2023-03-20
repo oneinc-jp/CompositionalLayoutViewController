@@ -1,6 +1,6 @@
 import CompositionalLayoutViewController
-import XCTest
 @testable import CompositionalLayoutViewController_Example
+import XCTest
 
 import UIKit
 
