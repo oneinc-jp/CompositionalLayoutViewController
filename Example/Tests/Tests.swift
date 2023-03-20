@@ -5,6 +5,10 @@ import XCTest
 import UIKit
 
 class TestSection: CollectionViewSection {
+    var identifier: String {
+        return "test-section"
+    }
+
     var snapshotItems: [AnyHashable] {
         return [title]
     }

@@ -33,6 +33,10 @@ extension TextFormSection {
 }
 
 class TextFormSection: CollectionViewSection {
+    var identifier: String {
+        return "text-form-section"
+    }
+
     var snapshotItems: [AnyHashable] {
         return items
     }

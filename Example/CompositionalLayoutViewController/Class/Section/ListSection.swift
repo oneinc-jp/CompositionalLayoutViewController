@@ -10,6 +10,10 @@ import CompositionalLayoutViewController
 import UIKit
 
 class ListSection<ViewModel: Hashable>: CollectionViewSection {
+    var identifier: String {
+        return "list-section"
+    }
+
     var snapshotItems: [AnyHashable] {
         return items
     }
