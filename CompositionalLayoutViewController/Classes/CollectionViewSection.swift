@@ -8,6 +8,7 @@
 import UIKit
 
 public protocol CollectionViewSection {
+    var identifier: String { get }
     var snapshotItems: [AnyHashable] { get }
 
     func registerCell(collectionView: UICollectionView)
@@ -38,6 +39,7 @@ public extension CollectionViewSection {
             hasher.combine($0)
         }
         hasher.combine(nonce)
+        hasher.combine(identifier)
         return hasher.finalize()
     }
 

@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E03A8EABD152021E463CE1F /* CompositionalLayoutViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CompositionalLayoutViewController.podspec; path = ../CompositionalLayoutViewController.podspec; sourceTree = "<group>"; };
+		0E03A8EABD152021E463CE1F /* CompositionalLayoutViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CompositionalLayoutViewController.podspec; path = ../CompositionalLayoutViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		26773E24238F6C4E2DEA3BE9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3528888696ADB633A88363B2 /* Pods-CompositionalLayoutViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositionalLayoutViewController_Example.release.xcconfig"; path = "Target Support Files/Pods-CompositionalLayoutViewController_Example/Pods-CompositionalLayoutViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CompositionalLayoutViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayoutViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };

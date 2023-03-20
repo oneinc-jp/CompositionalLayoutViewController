@@ -1,10 +1,14 @@
 import CompositionalLayoutViewController
-import XCTest
 @testable import CompositionalLayoutViewController_Example
+import XCTest
 
 import UIKit
 
 class TestSection: CollectionViewSection {
+    var identifier: String {
+        return "test-section"
+    }
+
     var snapshotItems: [AnyHashable] {
         return [title]
     }

@@ -22,6 +22,10 @@ class ButtonSection: CollectionViewSection {
 
     private var cancellable = Set<AnyCancellable>()
 
+    var identifier: String {
+        return buttonTitle
+    }
+
     var snapshotItems: [AnyHashable] {
         return [buttonTitle]
     }
