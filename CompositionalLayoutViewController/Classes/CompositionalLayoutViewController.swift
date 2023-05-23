@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 open class CompositionalLayoutViewController: UIViewController {
     public var collectionView: UICollectionView!
     public var highlightedColor: UIColor?
